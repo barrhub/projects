@@ -1,0 +1,14 @@
+These are instructions for running a simulated fantasy football season.  The stimulation was written for students in c105 ('Prediction, Probability, and Pigskin') taught by Ben Motz (bmotz@indiana.edu) at Indiana University.
+  
+To run the simulation follow these steps:
+1.) Download the pigsim.R, week12db.csv, pointsdb.csv files.
+2.) Enter the draft picks for each team in your league into the week12db.csv file in the owner column.  Use the numbers 1-10 to represent the teams.  These numbers should correspond to the order of the league so that the schedule is correct.
+3.) After the file has been edited and saved, start R.
+4.) Change the working directory to the directory containing the downloaded files.  At the R command prompt, the setwd() command sets the directory and the getwd() command prints the working directory.
+>> setwd('path/to/files')
+5.) Type source('pigsim.R') at the R command prompt to load the data and functions.
+>> source('pigsim.R')
+6.) Now you are ready to start the simulation.  To run the simulation call the function dosim and pass in your team number.  If your team number is 1, then  
+>> dosim(tm=1)
+7.) The simulation will run 100 times by default.  The adds and drops made to your team will be printed into the console.  Every two seasons a plot will the number of wins will be updated, and at the end of the simulation the best five teams will also be printed.
+
